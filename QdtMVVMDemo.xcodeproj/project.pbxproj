@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D130E5620455D5400918E18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E5520455D5400918E18 /* AppDelegate.m */; };
+		7D130E5920455D5400918E18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E5820455D5400918E18 /* ViewController.m */; };
+		7D130E5C20455D5400918E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D130E5A20455D5400918E18 /* Main.storyboard */; };
+		7D130E5E20455D5400918E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D130E5D20455D5400918E18 /* Assets.xcassets */; };
+		7D130E6120455D5400918E18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D130E5F20455D5400918E18 /* LaunchScreen.storyboard */; };
+		7D130E6420455D5500918E18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E6320455D5500918E18 /* main.m */; };
+		7D130E6E20455D5500918E18 /* QdtMVVMDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E6D20455D5500918E18 /* QdtMVVMDemoTests.m */; };
+		7D130E7920455D5500918E18 /* QdtMVVMDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E7820455D5500918E18 /* QdtMVVMDemoUITests.m */; };
+		7D130E8C20455F8F00918E18 /* QdtCommonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E8B20455F8F00918E18 /* QdtCommonTableViewController.m */; };
+		7D130E922045606900918E18 /* QdtCommonTableVCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E912045606900918E18 /* QdtCommonTableVCViewModel.m */; };
+		B84C321674072117C045B3E4 /* libPods-QdtMVVMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D492F2BA01E24498EA7E37 /* libPods-QdtMVVMDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D130E6A20455D5500918E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D130E4920455D5400918E18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D130E5020455D5400918E18;
+			remoteInfo = QdtMVVMDemo;
+		};
+		7D130E7520455D5500918E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D130E4920455D5400918E18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D130E5020455D5400918E18;
+			remoteInfo = QdtMVVMDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B236F2DB6FCFC3CEA209DB3 /* Pods-QdtMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QdtMVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QdtMVVMDemo/Pods-QdtMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		724438655E7EE46631905F74 /* Pods-QdtMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QdtMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QdtMVVMDemo/Pods-QdtMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7D130E5120455D5400918E18 /* QdtMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QdtMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D130E5420455D5400918E18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7D130E5520455D5400918E18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7D130E5720455D5400918E18 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7D130E5820455D5400918E18 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7D130E5B20455D5400918E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D130E5D20455D5400918E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D130E6020455D5400918E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D130E6220455D5400918E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D130E6320455D5500918E18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D130E6920455D5500918E18 /* QdtMVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QdtMVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D130E6D20455D5500918E18 /* QdtMVVMDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtMVVMDemoTests.m; sourceTree = "<group>"; };
+		7D130E6F20455D5500918E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D130E7420455D5500918E18 /* QdtMVVMDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QdtMVVMDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D130E7820455D5500918E18 /* QdtMVVMDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtMVVMDemoUITests.m; sourceTree = "<group>"; };
+		7D130E7A20455D5500918E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D130E8A20455F8F00918E18 /* QdtCommonTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtCommonTableViewController.h; sourceTree = "<group>"; };
+		7D130E8B20455F8F00918E18 /* QdtCommonTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtCommonTableViewController.m; sourceTree = "<group>"; };
+		7D130E902045606900918E18 /* QdtCommonTableVCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtCommonTableVCViewModel.h; sourceTree = "<group>"; };
+		7D130E912045606900918E18 /* QdtCommonTableVCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtCommonTableVCViewModel.m; sourceTree = "<group>"; };
+		F4D492F2BA01E24498EA7E37 /* libPods-QdtMVVMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QdtMVVMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D130E4E20455D5400918E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B84C321674072117C045B3E4 /* libPods-QdtMVVMDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D130E6620455D5500918E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D130E7120455D5500918E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49CDD8D57AC7739E2530085E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				724438655E7EE46631905F74 /* Pods-QdtMVVMDemo.debug.xcconfig */,
+				1B236F2DB6FCFC3CEA209DB3 /* Pods-QdtMVVMDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D130E4820455D5400918E18 = {
+			isa = PBXGroup;
+			children = (
+				7D130E5320455D5400918E18 /* QdtMVVMDemo */,
+				7D130E6C20455D5500918E18 /* QdtMVVMDemoTests */,
+				7D130E7720455D5500918E18 /* QdtMVVMDemoUITests */,
+				7D130E5220455D5400918E18 /* Products */,
+				49CDD8D57AC7739E2530085E /* Pods */,
+				AFADA67E91E36F923D3E0109 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7D130E5220455D5400918E18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D130E5120455D5400918E18 /* QdtMVVMDemo.app */,
+				7D130E6920455D5500918E18 /* QdtMVVMDemoTests.xctest */,
+				7D130E7420455D5500918E18 /* QdtMVVMDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D130E5320455D5400918E18 /* QdtMVVMDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7D130E5420455D5400918E18 /* AppDelegate.h */,
+				7D130E5520455D5400918E18 /* AppDelegate.m */,
+				7D130E5720455D5400918E18 /* ViewController.h */,
+				7D130E5820455D5400918E18 /* ViewController.m */,
+				7D130E8620455E6700918E18 /* CommonTableVC */,
+				7D130E5A20455D5400918E18 /* Main.storyboard */,
+				7D130E5D20455D5400918E18 /* Assets.xcassets */,
+				7D130E5F20455D5400918E18 /* LaunchScreen.storyboard */,
+				7D130E6220455D5400918E18 /* Info.plist */,
+				7D130E6320455D5500918E18 /* main.m */,
+			);
+			path = QdtMVVMDemo;
+			sourceTree = "<group>";
+		};
+		7D130E6C20455D5500918E18 /* QdtMVVMDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D130E6D20455D5500918E18 /* QdtMVVMDemoTests.m */,
+				7D130E6F20455D5500918E18 /* Info.plist */,
+			);
+			path = QdtMVVMDemoTests;
+			sourceTree = "<group>";
+		};
+		7D130E7720455D5500918E18 /* QdtMVVMDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7D130E7820455D5500918E18 /* QdtMVVMDemoUITests.m */,
+				7D130E7A20455D5500918E18 /* Info.plist */,
+			);
+			path = QdtMVVMDemoUITests;
+			sourceTree = "<group>";
+		};
+		7D130E8620455E6700918E18 /* CommonTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				7D130E8E20455FB600918E18 /* View */,
+				7D130E8D20455FAA00918E18 /* ViewModel */,
+				7D130E8F20455FBF00918E18 /* Model */,
+			);
+			path = CommonTableVC;
+			sourceTree = "<group>";
+		};
+		7D130E8D20455FAA00918E18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D130E902045606900918E18 /* QdtCommonTableVCViewModel.h */,
+				7D130E912045606900918E18 /* QdtCommonTableVCViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7D130E8E20455FB600918E18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D130E8A20455F8F00918E18 /* QdtCommonTableViewController.h */,
+				7D130E8B20455F8F00918E18 /* QdtCommonTableViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D130E8F20455FBF00918E18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFADA67E91E36F923D3E0109 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4D492F2BA01E24498EA7E37 /* libPods-QdtMVVMDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D130E5020455D5400918E18 /* QdtMVVMDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D130E7D20455D5500918E18 /* Build configuration list for PBXNativeTarget "QdtMVVMDemo" */;
+			buildPhases = (
+				E83D2F28CC206BE867BB7D56 /* [CP] Check Pods Manifest.lock */,
+				7D130E4D20455D5400918E18 /* Sources */,
+				7D130E4E20455D5400918E18 /* Frameworks */,
+				7D130E4F20455D5400918E18 /* Resources */,
+				6690552F5AB97C4C393D4702 /* [CP] Embed Pods Frameworks */,
+				447725FC461A13A8F632AA3E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QdtMVVMDemo;
+			productName = QdtMVVMDemo;
+			productReference = 7D130E5120455D5400918E18 /* QdtMVVMDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D130E6820455D5500918E18 /* QdtMVVMDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D130E8020455D5500918E18 /* Build configuration list for PBXNativeTarget "QdtMVVMDemoTests" */;
+			buildPhases = (
+				7D130E6520455D5500918E18 /* Sources */,
+				7D130E6620455D5500918E18 /* Frameworks */,
+				7D130E6720455D5500918E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D130E6B20455D5500918E18 /* PBXTargetDependency */,
+			);
+			name = QdtMVVMDemoTests;
+			productName = QdtMVVMDemoTests;
+			productReference = 7D130E6920455D5500918E18 /* QdtMVVMDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D130E7320455D5500918E18 /* QdtMVVMDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D130E8320455D5500918E18 /* Build configuration list for PBXNativeTarget "QdtMVVMDemoUITests" */;
+			buildPhases = (
+				7D130E7020455D5500918E18 /* Sources */,
+				7D130E7120455D5500918E18 /* Frameworks */,
+				7D130E7220455D5500918E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D130E7620455D5500918E18 /* PBXTargetDependency */,
+			);
+			name = QdtMVVMDemoUITests;
+			productName = QdtMVVMDemoUITests;
+			productReference = 7D130E7420455D5500918E18 /* QdtMVVMDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D130E4920455D5400918E18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = qiuzijie;
+				TargetAttributes = {
+					7D130E5020455D5400918E18 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					7D130E6820455D5500918E18 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7D130E5020455D5400918E18;
+					};
+					7D130E7320455D5500918E18 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7D130E5020455D5400918E18;
+					};
+				};
+			};
+			buildConfigurationList = 7D130E4C20455D5400918E18 /* Build configuration list for PBXProject "QdtMVVMDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D130E4820455D5400918E18;
+			productRefGroup = 7D130E5220455D5400918E18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D130E5020455D5400918E18 /* QdtMVVMDemo */,
+				7D130E6820455D5500918E18 /* QdtMVVMDemoTests */,
+				7D130E7320455D5500918E18 /* QdtMVVMDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D130E4F20455D5400918E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D130E6120455D5400918E18 /* LaunchScreen.storyboard in Resources */,
+				7D130E5E20455D5400918E18 /* Assets.xcassets in Resources */,
+				7D130E5C20455D5400918E18 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D130E6720455D5500918E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D130E7220455D5500918E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		447725FC461A13A8F632AA3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QdtMVVMDemo/Pods-QdtMVVMDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6690552F5AB97C4C393D4702 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QdtMVVMDemo/Pods-QdtMVVMDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E83D2F28CC206BE867BB7D56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QdtMVVMDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D130E4D20455D5400918E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D130E5920455D5400918E18 /* ViewController.m in Sources */,
+				7D130E922045606900918E18 /* QdtCommonTableVCViewModel.m in Sources */,
+				7D130E6420455D5500918E18 /* main.m in Sources */,
+				7D130E8C20455F8F00918E18 /* QdtCommonTableViewController.m in Sources */,
+				7D130E5620455D5400918E18 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D130E6520455D5500918E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D130E6E20455D5500918E18 /* QdtMVVMDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D130E7020455D5500918E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D130E7920455D5500918E18 /* QdtMVVMDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D130E6B20455D5500918E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D130E5020455D5400918E18 /* QdtMVVMDemo */;
+			targetProxy = 7D130E6A20455D5500918E18 /* PBXContainerItemProxy */;
+		};
+		7D130E7620455D5500918E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D130E5020455D5400918E18 /* QdtMVVMDemo */;
+			targetProxy = 7D130E7520455D5500918E18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D130E5A20455D5400918E18 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D130E5B20455D5400918E18 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D130E5F20455D5400918E18 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D130E6020455D5400918E18 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D130E7B20455D5500918E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7D130E7C20455D5500918E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D130E7E20455D5500918E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 724438655E7EE46631905F74 /* Pods-QdtMVVMDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QdtMVVMDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiuzijie.QdtMVVMDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D130E7F20455D5500918E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B236F2DB6FCFC3CEA209DB3 /* Pods-QdtMVVMDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QdtMVVMDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiuzijie.QdtMVVMDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D130E8120455D5500918E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QdtMVVMDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiuzijie.QdtMVVMDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QdtMVVMDemo.app/QdtMVVMDemo";
+			};
+			name = Debug;
+		};
+		7D130E8220455D5500918E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QdtMVVMDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiuzijie.QdtMVVMDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QdtMVVMDemo.app/QdtMVVMDemo";
+			};
+			name = Release;
+		};
+		7D130E8420455D5500918E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QdtMVVMDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiuzijie.QdtMVVMDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QdtMVVMDemo;
+			};
+			name = Debug;
+		};
+		7D130E8520455D5500918E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QdtMVVMDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiuzijie.QdtMVVMDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QdtMVVMDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D130E4C20455D5400918E18 /* Build configuration list for PBXProject "QdtMVVMDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D130E7B20455D5500918E18 /* Debug */,
+				7D130E7C20455D5500918E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D130E7D20455D5500918E18 /* Build configuration list for PBXNativeTarget "QdtMVVMDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D130E7E20455D5500918E18 /* Debug */,
+				7D130E7F20455D5500918E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D130E8020455D5500918E18 /* Build configuration list for PBXNativeTarget "QdtMVVMDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D130E8120455D5500918E18 /* Debug */,
+				7D130E8220455D5500918E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D130E8320455D5500918E18 /* Build configuration list for PBXNativeTarget "QdtMVVMDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D130E8420455D5500918E18 /* Debug */,
+				7D130E8520455D5500918E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D130E4920455D5400918E18 /* Project object */;
+}

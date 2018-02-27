@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oRd-Uq-8V3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="eCc-So-4oJ">
+            <objects>
+                <navigationController id="oRd-Uq-8V3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GhE-Mx-dhU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zZF-v1-SiB" kind="relationship" relationship="rootViewController" id="92v-iD-GS8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGF-Ze-zMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="389"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="b5G-pj-4yQ">
+            <objects>
+                <viewController id="zZF-v1-SiB" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5l-lk-b9e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSc-Xo-iO2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.95127755400000003" green="0.72373598809999995" blue="0.36331370470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Op3-zX-5wh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="普通列表页面">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlE-Sp-HOG">
+                                <rect key="frame" x="0.0" y="164" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.33655812709999999" green="0.68003625160000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mbe-zl-6oI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="复杂页面">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mlE-Sp-HOG" firstAttribute="leading" secondItem="4WW-js-z6T" secondAttribute="leading" id="3rQ-6C-9d6"/>
+                            <constraint firstItem="mlE-Sp-HOG" firstAttribute="trailing" secondItem="4WW-js-z6T" secondAttribute="trailing" id="9ce-iv-VYn"/>
+                            <constraint firstItem="4WW-js-z6T" firstAttribute="trailing" secondItem="TSc-Xo-iO2" secondAttribute="trailing" id="EjO-5d-RbA"/>
+                            <constraint firstItem="TSc-Xo-iO2" firstAttribute="top" secondItem="4WW-js-z6T" secondAttribute="top" id="RAC-0H-eBs"/>
+                            <constraint firstItem="TSc-Xo-iO2" firstAttribute="leading" secondItem="4WW-js-z6T" secondAttribute="leading" id="UU0-Yt-UfX"/>
+                            <constraint firstItem="mlE-Sp-HOG" firstAttribute="top" secondItem="TSc-Xo-iO2" secondAttribute="bottom" id="v6r-jn-ems"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4WW-js-z6T"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vLq-is-h6l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfF-hW-i0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="388"/>
+        </scene>
+    </scenes>
+</document>

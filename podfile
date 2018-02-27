@@ -1,0 +1,9 @@
+target 'QdtMVVMDemo' do
+
+platform :ios, '8.0'
+pod 'MBProgressHUD'
+pod 'Masonry'
+pod 'ReactiveCocoa', '~> 2.5'
+pod 'YYModel'
+
+end
