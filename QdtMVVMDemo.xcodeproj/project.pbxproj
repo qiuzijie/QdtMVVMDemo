@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D018CB6204791950070B349 /* QdtUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D018CB5204791950070B349 /* QdtUserCell.xib */; };
 		7D130E5620455D5400918E18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E5520455D5400918E18 /* AppDelegate.m */; };
 		7D130E5920455D5400918E18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E5820455D5400918E18 /* ViewController.m */; };
 		7D130E5C20455D5400918E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D130E5A20455D5400918E18 /* Main.storyboard */; };
@@ -15,8 +16,26 @@
 		7D130E6420455D5500918E18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E6320455D5500918E18 /* main.m */; };
 		7D130E6E20455D5500918E18 /* QdtMVVMDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E6D20455D5500918E18 /* QdtMVVMDemoTests.m */; };
 		7D130E7920455D5500918E18 /* QdtMVVMDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E7820455D5500918E18 /* QdtMVVMDemoUITests.m */; };
-		7D130E8C20455F8F00918E18 /* QdtCommonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E8B20455F8F00918E18 /* QdtCommonTableViewController.m */; };
-		7D130E922045606900918E18 /* QdtCommonTableVCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E912045606900918E18 /* QdtCommonTableVCViewModel.m */; };
+		7D130E8C20455F8F00918E18 /* QdtUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E8B20455F8F00918E18 /* QdtUserListViewController.m */; };
+		7D130E922045606900918E18 /* QdtUserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E912045606900918E18 /* QdtUserListViewModel.m */; };
+		7D130EA4204639A500918E18 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E95204639A500918E18 /* UIScrollView+MJRefresh.m */; };
+		7D130EA5204639A500918E18 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E96204639A500918E18 /* MJRefreshConst.m */; };
+		7D130EA6204639A500918E18 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E98204639A500918E18 /* MJRefreshHeaderView.m */; };
+		7D130EA7204639A500918E18 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D130E9A204639A500918E18 /* MJRefresh.bundle */; };
+		7D130EA8204639A500918E18 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E9C204639A500918E18 /* MJRefreshBaseView.m */; };
+		7D130EA9204639A500918E18 /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E9D204639A500918E18 /* UIScrollView+Extension.m */; };
+		7D130EAA204639A500918E18 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E9F204639A500918E18 /* MJRefreshFooterView.m */; };
+		7D130EAB204639A500918E18 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130EA3204639A500918E18 /* UIView+Extension.m */; };
+		7D164EB1204639FF008FAB13 /* UITableView+QdtDataSourceBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D164EAE204639FF008FAB13 /* UITableView+QdtDataSourceBinder.m */; };
+		7D164EB2204639FF008FAB13 /* QdtTableViewDataSourceBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D164EAF204639FF008FAB13 /* QdtTableViewDataSourceBinder.m */; };
+		7D164EB720463E23008FAB13 /* UIImage+QdtMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D164EB520463E23008FAB13 /* UIImage+QdtMethods.m */; };
+		7D164EB920464ABA008FAB13 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D164EB820464ABA008FAB13 /* Reveal.framework */; };
+		7D164EBB20464B26008FAB13 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D164EBA20464B25008FAB13 /* libz.tbd */; };
+		7D164EBE204653DE008FAB13 /* QdtNetworkingUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D164EBD204653DE008FAB13 /* QdtNetworkingUtility.m */; };
+		7D164EC220465A34008FAB13 /* QdtUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D164EC120465A34008FAB13 /* QdtUserModel.m */; };
+		7D164EC52046938A008FAB13 /* QdtUserCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D164EC42046938A008FAB13 /* QdtUserCellViewModel.m */; };
+		7D164EC82046946F008FAB13 /* QdtUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D164EC72046946F008FAB13 /* QdtUserCell.m */; };
+		7D7BBD462046A07A00A95FD3 /* QdtUserListReceiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7BBD452046A07A00A95FD3 /* QdtUserListReceiveModel.m */; };
 		B84C321674072117C045B3E4 /* libPods-QdtMVVMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D492F2BA01E24498EA7E37 /* libPods-QdtMVVMDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +59,7 @@
 /* Begin PBXFileReference section */
 		1B236F2DB6FCFC3CEA209DB3 /* Pods-QdtMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QdtMVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QdtMVVMDemo/Pods-QdtMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 		724438655E7EE46631905F74 /* Pods-QdtMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QdtMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QdtMVVMDemo/Pods-QdtMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7D018CB5204791950070B349 /* QdtUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QdtUserCell.xib; sourceTree = "<group>"; };
 		7D130E5120455D5400918E18 /* QdtMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QdtMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D130E5420455D5400918E18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D130E5520455D5400918E18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,10 +76,47 @@
 		7D130E7420455D5500918E18 /* QdtMVVMDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QdtMVVMDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D130E7820455D5500918E18 /* QdtMVVMDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtMVVMDemoUITests.m; sourceTree = "<group>"; };
 		7D130E7A20455D5500918E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D130E8A20455F8F00918E18 /* QdtCommonTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtCommonTableViewController.h; sourceTree = "<group>"; };
-		7D130E8B20455F8F00918E18 /* QdtCommonTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtCommonTableViewController.m; sourceTree = "<group>"; };
-		7D130E902045606900918E18 /* QdtCommonTableVCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtCommonTableVCViewModel.h; sourceTree = "<group>"; };
-		7D130E912045606900918E18 /* QdtCommonTableVCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtCommonTableVCViewModel.m; sourceTree = "<group>"; };
+		7D130E8A20455F8F00918E18 /* QdtUserListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtUserListViewController.h; sourceTree = "<group>"; };
+		7D130E8B20455F8F00918E18 /* QdtUserListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtUserListViewController.m; sourceTree = "<group>"; };
+		7D130E902045606900918E18 /* QdtUserListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtUserListViewModel.h; sourceTree = "<group>"; };
+		7D130E912045606900918E18 /* QdtUserListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtUserListViewModel.m; sourceTree = "<group>"; };
+		7D130E94204639A500918E18 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		7D130E95204639A500918E18 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		7D130E96204639A500918E18 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		7D130E97204639A500918E18 /* UIScrollView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extension.h"; sourceTree = "<group>"; };
+		7D130E98204639A500918E18 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		7D130E99204639A500918E18 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		7D130E9A204639A500918E18 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		7D130E9B204639A500918E18 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		7D130E9C204639A500918E18 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		7D130E9D204639A500918E18 /* UIScrollView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extension.m"; sourceTree = "<group>"; };
+		7D130E9E204639A500918E18 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		7D130E9F204639A500918E18 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		7D130EA0204639A500918E18 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		7D130EA1204639A500918E18 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		7D130EA2204639A500918E18 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		7D130EA3204639A500918E18 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		7D164EAB204639FE008FAB13 /* QdtTableViewDataSourceBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QdtTableViewDataSourceBinder.h; sourceTree = "<group>"; };
+		7D164EAC204639FE008FAB13 /* QdtReactiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QdtReactiveView.h; sourceTree = "<group>"; };
+		7D164EAD204639FE008FAB13 /* UITableView+QdtDataSourceBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+QdtDataSourceBinder.h"; sourceTree = "<group>"; };
+		7D164EAE204639FF008FAB13 /* UITableView+QdtDataSourceBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+QdtDataSourceBinder.m"; sourceTree = "<group>"; };
+		7D164EAF204639FF008FAB13 /* QdtTableViewDataSourceBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QdtTableViewDataSourceBinder.m; sourceTree = "<group>"; };
+		7D164EB0204639FF008FAB13 /* QdtReactiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QdtReactiveViewController.h; sourceTree = "<group>"; };
+		7D164EB520463E23008FAB13 /* UIImage+QdtMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QdtMethods.m"; sourceTree = "<group>"; };
+		7D164EB620463E23008FAB13 /* UIImage+QdtMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QdtMethods.h"; sourceTree = "<group>"; };
+		7D164EB820464ABA008FAB13 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		7D164EBA20464B25008FAB13 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7D164EBC204653DE008FAB13 /* QdtNetworkingUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtNetworkingUtility.h; sourceTree = "<group>"; };
+		7D164EBD204653DE008FAB13 /* QdtNetworkingUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtNetworkingUtility.m; sourceTree = "<group>"; };
+		7D164EBF204654DD008FAB13 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7D164EC020465A34008FAB13 /* QdtUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtUserModel.h; sourceTree = "<group>"; };
+		7D164EC120465A34008FAB13 /* QdtUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtUserModel.m; sourceTree = "<group>"; };
+		7D164EC32046938A008FAB13 /* QdtUserCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtUserCellViewModel.h; sourceTree = "<group>"; };
+		7D164EC42046938A008FAB13 /* QdtUserCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtUserCellViewModel.m; sourceTree = "<group>"; };
+		7D164EC62046946F008FAB13 /* QdtUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtUserCell.h; sourceTree = "<group>"; };
+		7D164EC72046946F008FAB13 /* QdtUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtUserCell.m; sourceTree = "<group>"; };
+		7D7BBD442046A07A00A95FD3 /* QdtUserListReceiveModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtUserListReceiveModel.h; sourceTree = "<group>"; };
+		7D7BBD452046A07A00A95FD3 /* QdtUserListReceiveModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtUserListReceiveModel.m; sourceTree = "<group>"; };
 		F4D492F2BA01E24498EA7E37 /* libPods-QdtMVVMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QdtMVVMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,7 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D164EBB20464B26008FAB13 /* libz.tbd in Frameworks */,
 				B84C321674072117C045B3E4 /* libPods-QdtMVVMDemo.a in Frameworks */,
+				7D164EB920464ABA008FAB13 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,12 +186,17 @@
 				7D130E5520455D5400918E18 /* AppDelegate.m */,
 				7D130E5720455D5400918E18 /* ViewController.h */,
 				7D130E5820455D5400918E18 /* ViewController.m */,
-				7D130E8620455E6700918E18 /* CommonTableVC */,
+				7D164EAC204639FE008FAB13 /* QdtReactiveView.h */,
+				7D164EB0204639FF008FAB13 /* QdtReactiveViewController.h */,
+				7D164EBF204654DD008FAB13 /* PrefixHeader.pch */,
+				7D130E8620455E6700918E18 /* UserList */,
 				7D130E5A20455D5400918E18 /* Main.storyboard */,
 				7D130E5D20455D5400918E18 /* Assets.xcassets */,
 				7D130E5F20455D5400918E18 /* LaunchScreen.storyboard */,
 				7D130E6220455D5400918E18 /* Info.plist */,
 				7D130E6320455D5500918E18 /* main.m */,
+				7D164EB420463A7E008FAB13 /* Tool */,
+				7D164EB320463A6B008FAB13 /* Category */,
 			);
 			path = QdtMVVMDemo;
 			sourceTree = "<group>";
@@ -155,21 +219,23 @@
 			path = QdtMVVMDemoUITests;
 			sourceTree = "<group>";
 		};
-		7D130E8620455E6700918E18 /* CommonTableVC */ = {
+		7D130E8620455E6700918E18 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
 				7D130E8E20455FB600918E18 /* View */,
 				7D130E8D20455FAA00918E18 /* ViewModel */,
 				7D130E8F20455FBF00918E18 /* Model */,
 			);
-			path = CommonTableVC;
+			path = UserList;
 			sourceTree = "<group>";
 		};
 		7D130E8D20455FAA00918E18 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7D130E902045606900918E18 /* QdtCommonTableVCViewModel.h */,
-				7D130E912045606900918E18 /* QdtCommonTableVCViewModel.m */,
+				7D130E902045606900918E18 /* QdtUserListViewModel.h */,
+				7D130E912045606900918E18 /* QdtUserListViewModel.m */,
+				7D164EC32046938A008FAB13 /* QdtUserCellViewModel.h */,
+				7D164EC42046938A008FAB13 /* QdtUserCellViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,8 +243,11 @@
 		7D130E8E20455FB600918E18 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7D130E8A20455F8F00918E18 /* QdtCommonTableViewController.h */,
-				7D130E8B20455F8F00918E18 /* QdtCommonTableViewController.m */,
+				7D130E8A20455F8F00918E18 /* QdtUserListViewController.h */,
+				7D130E8B20455F8F00918E18 /* QdtUserListViewController.m */,
+				7D164EC62046946F008FAB13 /* QdtUserCell.h */,
+				7D164EC72046946F008FAB13 /* QdtUserCell.m */,
+				7D018CB5204791950070B349 /* QdtUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,13 +255,65 @@
 		7D130E8F20455FBF00918E18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7D164EC020465A34008FAB13 /* QdtUserModel.h */,
+				7D164EC120465A34008FAB13 /* QdtUserModel.m */,
+				7D7BBD442046A07A00A95FD3 /* QdtUserListReceiveModel.h */,
+				7D7BBD452046A07A00A95FD3 /* QdtUserListReceiveModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7D130E93204639A500918E18 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				7D130E94204639A500918E18 /* MJRefreshFooterView.h */,
+				7D130E95204639A500918E18 /* UIScrollView+MJRefresh.m */,
+				7D130E96204639A500918E18 /* MJRefreshConst.m */,
+				7D130E97204639A500918E18 /* UIScrollView+Extension.h */,
+				7D130E98204639A500918E18 /* MJRefreshHeaderView.m */,
+				7D130E99204639A500918E18 /* MJRefresh.h */,
+				7D130E9A204639A500918E18 /* MJRefresh.bundle */,
+				7D130E9B204639A500918E18 /* UIView+Extension.h */,
+				7D130E9C204639A500918E18 /* MJRefreshBaseView.m */,
+				7D130E9D204639A500918E18 /* UIScrollView+Extension.m */,
+				7D130E9E204639A500918E18 /* MJRefreshConst.h */,
+				7D130E9F204639A500918E18 /* MJRefreshFooterView.m */,
+				7D130EA0204639A500918E18 /* UIScrollView+MJRefresh.h */,
+				7D130EA1204639A500918E18 /* MJRefreshHeaderView.h */,
+				7D130EA2204639A500918E18 /* MJRefreshBaseView.h */,
+				7D130EA3204639A500918E18 /* UIView+Extension.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		7D164EB320463A6B008FAB13 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7D164EB620463E23008FAB13 /* UIImage+QdtMethods.h */,
+				7D164EB520463E23008FAB13 /* UIImage+QdtMethods.m */,
+				7D164EAD204639FE008FAB13 /* UITableView+QdtDataSourceBinder.h */,
+				7D164EAE204639FF008FAB13 /* UITableView+QdtDataSourceBinder.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7D164EB420463A7E008FAB13 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				7D164EBC204653DE008FAB13 /* QdtNetworkingUtility.h */,
+				7D164EBD204653DE008FAB13 /* QdtNetworkingUtility.m */,
+				7D164EB820464ABA008FAB13 /* Reveal.framework */,
+				7D164EAB204639FE008FAB13 /* QdtTableViewDataSourceBinder.h */,
+				7D164EAF204639FF008FAB13 /* QdtTableViewDataSourceBinder.m */,
+				7D130E93204639A500918E18 /* MJRefresh */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		AFADA67E91E36F923D3E0109 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D164EBA20464B25008FAB13 /* libz.tbd */,
 				F4D492F2BA01E24498EA7E37 /* libPods-QdtMVVMDemo.a */,
 			);
 			name = Frameworks;
@@ -307,8 +428,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D018CB6204791950070B349 /* QdtUserCell.xib in Resources */,
 				7D130E6120455D5400918E18 /* LaunchScreen.storyboard in Resources */,
 				7D130E5E20455D5400918E18 /* Assets.xcassets in Resources */,
+				7D130EA7204639A500918E18 /* MJRefresh.bundle in Resources */,
 				7D130E5C20455D5400918E18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,10 +508,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D164EC220465A34008FAB13 /* QdtUserModel.m in Sources */,
+				7D164EB720463E23008FAB13 /* UIImage+QdtMethods.m in Sources */,
+				7D164EC82046946F008FAB13 /* QdtUserCell.m in Sources */,
+				7D164EB1204639FF008FAB13 /* UITableView+QdtDataSourceBinder.m in Sources */,
+				7D7BBD462046A07A00A95FD3 /* QdtUserListReceiveModel.m in Sources */,
+				7D164EC52046938A008FAB13 /* QdtUserCellViewModel.m in Sources */,
+				7D130EAA204639A500918E18 /* MJRefreshFooterView.m in Sources */,
 				7D130E5920455D5400918E18 /* ViewController.m in Sources */,
-				7D130E922045606900918E18 /* QdtCommonTableVCViewModel.m in Sources */,
+				7D130E922045606900918E18 /* QdtUserListViewModel.m in Sources */,
+				7D130EA6204639A500918E18 /* MJRefreshHeaderView.m in Sources */,
+				7D164EBE204653DE008FAB13 /* QdtNetworkingUtility.m in Sources */,
+				7D130EA9204639A500918E18 /* UIScrollView+Extension.m in Sources */,
+				7D130EA4204639A500918E18 /* UIScrollView+MJRefresh.m in Sources */,
+				7D130EAB204639A500918E18 /* UIView+Extension.m in Sources */,
+				7D130EA5204639A500918E18 /* MJRefreshConst.m in Sources */,
 				7D130E6420455D5500918E18 /* main.m in Sources */,
-				7D130E8C20455F8F00918E18 /* QdtCommonTableViewController.m in Sources */,
+				7D130EA8204639A500918E18 /* MJRefreshBaseView.m in Sources */,
+				7D130E8C20455F8F00918E18 /* QdtUserListViewController.m in Sources */,
+				7D164EB2204639FF008FAB13 /* QdtTableViewDataSourceBinder.m in Sources */,
 				7D130E5620455D5400918E18 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,7 +692,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QdtMVVMDemo/Tool",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QdtMVVMDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = QdtMVVMDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiuzijie.QdtMVVMDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,7 +714,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QdtMVVMDemo/Tool",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QdtMVVMDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = QdtMVVMDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiuzijie.QdtMVVMDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

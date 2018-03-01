@@ -44,6 +44,9 @@
                                 <state key="normal" title="普通列表页面">
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapCommonTableVCButton:" destination="zZF-v1-SiB" eventType="touchUpInside" id="uQC-8n-kJt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlE-Sp-HOG">
                                 <rect key="frame" x="0.0" y="164" width="375" height="100"/>
@@ -55,6 +58,9 @@
                                 <state key="normal" title="复杂页面">
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapComplexButton:" destination="zZF-v1-SiB" eventType="touchUpInside" id="oDX-rX-rrV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

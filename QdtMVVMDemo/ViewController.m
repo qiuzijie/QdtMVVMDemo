@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "QdtUserListViewController.h"
 
 @interface ViewController ()
 
@@ -18,7 +19,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+- (IBAction)tapCommonTableVCButton:(UIButton *)sender {
+    QdtUserListViewModel *viewModel = [QdtUserListViewModel new];
+    QdtUserListViewController *vc = [[QdtUserListViewController alloc] initWithViewModel:viewModel];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
+- (IBAction)tapComplexButton:(UIButton *)sender {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
