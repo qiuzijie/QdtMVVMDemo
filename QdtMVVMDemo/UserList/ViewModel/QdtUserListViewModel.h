@@ -11,8 +11,8 @@
 @interface QdtUserListViewModel : NSObject
 
 - (instancetype)initWithUserID:(NSInteger)userID;
-
 @property (nonatomic, copy  ) NSString *searchText;
+@property (nonatomic, copy  , readonly) NSString *title;
 @property (nonatomic, strong, readonly) NSArray *userViewModels;
 @property (nonatomic, strong, readonly) RACCommand *fetchUserListCommand;
 @property (nonatomic, strong, readonly) RACCommand *searchUsersCommand;

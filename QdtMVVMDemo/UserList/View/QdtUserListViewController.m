@@ -15,7 +15,7 @@
 
 static CGFloat kSearchTextFieldHeight = 40;
 
-@interface QdtUserListViewController ()<UITableViewDelegate, UITextFieldDelegate>
+@interface QdtUserListViewController ()<UITableViewDelegate, UITextFieldDelegate, UITableViewDataSource>
 @property (nonatomic, strong) QdtUserListViewModel *viewModel;
 @property (nonatomic, strong) UIView *searchContainerView;
 @property (nonatomic, strong) UITextField *searchTextField;
@@ -45,6 +45,7 @@ static CGFloat kSearchTextFieldHeight = 40;
 #pragma mark- configView
 - (void)configView{
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = self.viewModel.title;
     [self addSubviews];
     [self constraintSubviews];
 }
@@ -86,7 +87,12 @@ static CGFloat kSearchTextFieldHeight = 40;
 - (void)bindViewModel{
     @weakify(self);
     
-    [self.userTableView bindRowSourceSignal:RACObserve(self.viewModel, userViewModels) cellIdentifier:@"cell"];
+//    [self.userTableView bindRowSourceSignal:RACObserve(self.viewModel, userViewModels) cellIdentifier:@"cell"];
+    
+    [[[RACObserve(self.viewModel, userViewModels) distinctUntilChanged] deliverOnMainThread] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.userTableView reloadData];
+    }];
     
     [self.userTableView addHeaderWithCommand:self.viewModel.fetchUserListCommand];
 
@@ -127,10 +133,39 @@ static CGFloat kSearchTextFieldHeight = 40;
 
 #pragma mark- delegate
 
-#pragma mark- UITableView Delegate
+#pragma mark- UITableViewDataSource
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    QdtUserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    QdtUserCellViewModel *viewModel = self.viewModel.userViewModels[indexPath.row];
+    [[viewModel.followCommand executing] subscribeNext:^(NSNumber *value) {
+        if (value.boolValue) {
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        } else {
+            [MBProgressHUD hideHUDForView:self.view animated:NO];
+        };
+    }];
+    cell.viewModel = viewModel;
+    @weakify(self);
+    cell.followBlock = ^{
+        @strongify(self);
+        [self followUser:viewModel];
+    };
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.viewModel.userViewModels.count;
+}
+
+#pragma mark- UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIViewController *vc = [UIViewController new];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    vc.title = @"用户信息";
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -138,6 +173,23 @@ static CGFloat kSearchTextFieldHeight = 40;
 }
 
 #pragma mark- action
+
+- (void)followUser:(QdtUserCellViewModel *)viewModel{
+    if (viewModel.user.follow) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"取消关注" message:[NSString stringWithFormat:@"确定取消关注 %@ 吗？",viewModel.userName] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            ;
+        }];
+        UIAlertAction *actionConfirm = [UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [viewModel.followCommand execute:nil];
+        }];
+        [alertController addAction:actionCancel];
+        [alertController addAction:actionConfirm];
+        [self presentViewController:alertController animated:YES completion:nil];
+    } else {
+        [viewModel.followCommand execute:nil];
+    }
+}
 
 #pragma mark- private
 
@@ -178,6 +230,8 @@ static CGFloat kSearchTextFieldHeight = 40;
         _userTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _userTableView.tableFooterView = [UIView new];
         _userTableView.delegate = self;
+        _userTableView.dataSource = self;
+        _userTableView.rowHeight = 60;
         [_userTableView registerNib:[UINib nibWithNibName:@"QdtUserCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"cell"];
     }
     return _userTableView;

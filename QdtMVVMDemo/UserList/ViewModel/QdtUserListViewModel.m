@@ -12,6 +12,7 @@
 #import "QdtUserListReceiveModel.h"
 
 @interface QdtUserListViewModel ()
+@property (nonatomic, copy  , readwrite) NSString *title;
 @property (nonatomic, strong, readwrite) NSArray *userViewModels;
 @property (nonatomic, strong, readwrite) RACCommand *fetchUserListCommand;
 @property (nonatomic, strong, readwrite) RACCommand *searchUsersCommand;
@@ -27,6 +28,7 @@
     self = [super init];
     if (self) {
         _userID = userID;
+        _title = @"用户列表";
     }
     return self;
 }
@@ -51,7 +53,7 @@
     @weakify(self);
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"userID":@(userID),@"page":@(page)}];
     [dic setValue:searchText forKey:@"query"];
-    RACSignal *signal = [[[QdtNetworkingUtility new] postSignalFromAPIMethod:@"获取用户列表" arguments:dic] doNext:^(QdtUserListReceiveModel *res) {
+    RACSignal *signal = [[[QdtNetworkingUtility new] fetchUserListSignalWithInput:dic] doNext:^(QdtUserListReceiveModel *res) {
         @strongify(self);
         NSArray *array = [res.users.rac_sequence map:^id(QdtUserModel *value) {
             return [QdtUserCellViewModel viewModelWithUserModel:value];

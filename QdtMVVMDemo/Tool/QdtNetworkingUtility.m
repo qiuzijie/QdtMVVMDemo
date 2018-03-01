@@ -11,29 +11,70 @@
 
 @implementation QdtNetworkingUtility
 
-- (RACSignal *)postSignalFromAPIMethod:(NSString *)method arguments:(NSDictionary *)args{
+- (RACSignal *)fetchUserListSignalWithInput:(NSDictionary *)input{
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        //模拟网络请求
-        [[RACScheduler scheduler] afterDelay:2 schedule:^{
-            NSMutableArray *datas = [NSMutableArray new];
-            NSInteger page = [[args objectForKey:@"page"] integerValue];
-            NSString *query = [args objectForKey:@"query"];
-            for (NSInteger i = (page-1)*10+1; i <= page*10; i++) {
-                QdtUserModel *user = [QdtUserModel new];
-                if (query.length > 0) {
-                    user.userName = [NSString stringWithFormat:@"%@ %ld 号",query,i];
-                } else {
-                    user.userName = [NSString stringWithFormat:@"用户 %ld 号",i];
+        [self requestAPIMethod:@"获取用户列表" arguments:input completionHandler:^(NSError *error, id result) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                NSMutableArray *datas = [NSMutableArray new];
+                NSInteger page = [[input objectForKey:@"page"] integerValue];
+                NSString *query = [input objectForKey:@"query"];
+                for (NSInteger i = (page-1)*10+1; i <= page*10; i++) {
+                    QdtUserModel *user = [QdtUserModel new];
+                    if (query.length > 0) {
+                        user.userName = [NSString stringWithFormat:@"%@ %ld 号",query,i];
+                    } else {
+                        user.userName = [NSString stringWithFormat:@"用户 %ld 号",i];
+                    }
+                    [datas addObject:user];
                 }
-                [datas addObject:user];
-            }
-            QdtUserListReceiveModel *model = [QdtUserListReceiveModel new];
-            model.users = [datas copy];
-            model.hasNext = (page < 3 && query.length == 0) ? YES : NO;
-            [subscriber sendNext:model];
-            [subscriber sendCompleted];
+                QdtUserListReceiveModel *model = [QdtUserListReceiveModel new];
+                model.users = [datas copy];
+                model.hasNext = (page < 3 && query.length == 0) ? YES : NO;
+                [subscriber sendNext:model];
+                [subscriber sendCompleted];
+            };
         }];
         return nil;
+    }];
+}
+
+- (RACSignal *)likeUserSignalWithInput:(NSDictionary *)input{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self requestAPIMethod:@"点赞用户" arguments:input completionHandler:^(NSError *error, id result) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                BOOL isLike = [input[@"isLike"] boolValue];;
+                [subscriber sendNext:@(!isLike)];
+                [subscriber sendCompleted];
+            };
+        }];
+        return nil;
+    }];
+}
+
+- (RACSignal *)followUserSignalWithInput:(NSDictionary *)input{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self requestAPIMethod:@"关注用户" arguments:input completionHandler:^(NSError *error, id result) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                BOOL isFollow = [input[@"isFollow"] boolValue];
+                [subscriber sendNext:@(!isFollow)];
+                [subscriber sendCompleted];
+            };
+        }];
+        return nil;
+    }];
+}
+
+- (void)requestAPIMethod:(NSString *)method arguments:(NSDictionary *)args completionHandler:(NetworkCompletionHandler)completionHandler{
+    [[RACScheduler scheduler] afterDelay:2 schedule:^{
+        if (completionHandler) {
+            completionHandler(nil,nil);
+        };
     }];
 }
 

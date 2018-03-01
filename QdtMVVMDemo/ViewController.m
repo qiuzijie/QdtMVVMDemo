@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (IBAction)tapCommonTableVCButton:(UIButton *)sender {
-    QdtUserListViewModel *viewModel = [QdtUserListViewModel new];
+    QdtUserListViewModel *viewModel = [[QdtUserListViewModel alloc] initWithUserID:0];
     QdtUserListViewController *vc = [[QdtUserListViewController alloc] initWithViewModel:viewModel];
     [self.navigationController pushViewController:vc animated:YES];
 }

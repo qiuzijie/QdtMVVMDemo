@@ -42,6 +42,13 @@
 //    RAC(self.followButton.titleLabel, text) = [[RACObserve(self.viewModel, followText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread];
     
     self.likeButton.rac_command = self.viewModel.likeCommand;
+
+    [[self.followButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        if (self.followBlock) {
+            self.followBlock();
+        }
+    }];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "QdtUserCellViewModel.h"
+#import "QdtNetworkingUtility.h"
 
 @interface QdtUserCellViewModel ()
 @property (nonatomic, strong, readwrite) QdtUserModel *user;
@@ -62,19 +63,25 @@
 - (RACCommand *)likeCommand{
     if (!_likeCommand) {
         _likeCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-                [[RACScheduler scheduler] afterDelay:2 schedule:^{
-                    self.user.like = !self.user.like;
-                    self.likeText = self.user.like ? @"Dislike":@"Like";
-                    [subscriber sendCompleted];
-                }];
-                return nil;
+            self.user.like = !self.user.like;
+            return [[[QdtNetworkingUtility new] likeUserSignalWithInput:@{@"userID":@(self.user.userID),@"isLike":@(!self.user.like)}] doNext:^(NSNumber *x) {
+                self.user.like = x.boolValue;
             }];
         }];
     }
     return _likeCommand;
 }
 
+- (RACCommand *)followCommand{
+    if (!_followCommand) {
+        _followCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            return [[[QdtNetworkingUtility new] followUserSignalWithInput:@{@"userID":@(self.user.userID),@"isFollow":@(self.user.follow)}] doNext:^(NSNumber *x) {
+                self.user.follow = x.boolValue;
+            }];
+        }];
+    }
+    return _followCommand;
+}
 
 @end
 

@@ -10,6 +10,8 @@
 #import "QdtReactiveView.h"
 #import "QdtUserCellViewModel.h"
 
+typedef void(^QdtUserCellBlock)(void);
 @interface QdtUserCell : UITableViewCell<QdtReactiveView>
 @property (nonatomic, strong) QdtUserCellViewModel *viewModel;
+@property (nonatomic, strong) QdtUserCellBlock followBlock;
 @end

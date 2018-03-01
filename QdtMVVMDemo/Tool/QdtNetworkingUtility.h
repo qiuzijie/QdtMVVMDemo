@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+typedef void(^NetworkCompletionHandler)(NSError *error, id result);
 @interface QdtNetworkingUtility : NSObject
-- (RACSignal *)postSignalFromAPIMethod:(NSString *)method arguments:(NSDictionary *)args;
+- (RACSignal *)fetchUserListSignalWithInput:(NSDictionary *)input;
+- (RACSignal *)likeUserSignalWithInput:(NSDictionary *)input;
+- (RACSignal *)followUserSignalWithInput:(NSDictionary *)input;
 @end
