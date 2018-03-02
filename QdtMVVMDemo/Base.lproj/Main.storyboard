@@ -75,6 +75,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tapComplexButton:" destination="zZF-v1-SiB" eventType="touchUpInside" id="n0R-dS-hgH"/>
+                                    <action selector="tapTransformersButton:" destination="zZF-v1-SiB" eventType="touchUpInside" id="hUa-D5-Qmc"/>
                                 </connections>
                             </button>
                         </subviews>
