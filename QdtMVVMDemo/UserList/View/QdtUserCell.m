@@ -9,6 +9,7 @@
 #import "QdtUserCell.h"
 
 @interface QdtUserCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel  *userNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *followButton;
@@ -23,32 +24,43 @@
 
 - (void)bindViewModel{
     self.userNameLabel.text = self.viewModel.userName;
+    if (self.viewModel.iconImage) {
+        [self.iconImageView setImage:self.viewModel.iconImage];
+    }
     
-    @weakify(self);
-    [[[RACObserve(self.viewModel, likeText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread] subscribeNext:^(id x) {
-        @strongify(self);
-        [self.likeButton setTitle:x forState:UIControlStateNormal];
-    }];
-    
-    [[[RACObserve(self.viewModel, followText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread] subscribeNext:^(id x) {
-        @strongify(self);
-        [self.followButton setTitle:x forState:UIControlStateNormal];
-    }];
-    
-    RAC(self.likeButton, backgroundColor) = [[RACObserve(self.viewModel, likeButtonColor) deliverOnMainThread] takeUntil:self.rac_prepareForReuseSignal];
-    RAC(self.followButton, backgroundColor) = [[RACObserve(self.viewModel, followButtonColor) deliverOnMainThread] takeUntil:self.rac_prepareForReuseSignal];
-    
-//    RAC(self.likeButton.titleLabel, text) = [[RACObserve(self.viewModel, likeText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread];
-//    RAC(self.followButton.titleLabel, text) = [[RACObserve(self.viewModel, followText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread];
-    
-    self.likeButton.rac_command = self.viewModel.likeCommand;
+    if (!self.viewModel.operationButtonHide) {
+        @weakify(self);
+        self.likeButton.hidden = NO;
+        self.followButton.hidden = NO;
+        [[[RACObserve(self.viewModel, likeText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread] subscribeNext:^(id x) {
+            @strongify(self);
+            [self.likeButton setTitle:x forState:UIControlStateNormal];
+        }];
+        
+        [[[RACObserve(self.viewModel, followText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread] subscribeNext:^(id x) {
+            @strongify(self);
+            [self.followButton setTitle:x forState:UIControlStateNormal];
+        }];
+        
+        RAC(self.likeButton, backgroundColor) = [[RACObserve(self.viewModel, likeButtonColor) deliverOnMainThread] takeUntil:self.rac_prepareForReuseSignal];
+        RAC(self.followButton, backgroundColor) = [[RACObserve(self.viewModel, followButtonColor) deliverOnMainThread] takeUntil:self.rac_prepareForReuseSignal];
+        
+        //    RAC(self.likeButton.titleLabel, text) = [[RACObserve(self.viewModel, likeText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread];
+        //    RAC(self.followButton.titleLabel, text) = [[RACObserve(self.viewModel, followText) takeUntil:self.rac_prepareForReuseSignal] deliverOnMainThread];
+        
+        self.likeButton.rac_command = self.viewModel.likeCommand;
+        
+        [[self.followButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            if (self.followBlock) {
+                self.followBlock();
+            }
+        }];
+    } else {
+        self.likeButton.hidden = YES;
+        self.followButton.hidden = YES;
+    }
 
-    [[self.followButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        @strongify(self);
-        if (self.followBlock) {
-            self.followBlock();
-        }
-    }];
 }
 
 @end

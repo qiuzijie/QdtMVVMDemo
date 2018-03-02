@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7D018CB6204791950070B349 /* QdtUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D018CB5204791950070B349 /* QdtUserCell.xib */; };
+		7D018CBD2047E4310070B349 /* QdtCommonUserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D018CBC2047E4310070B349 /* QdtCommonUserListViewController.m */; };
+		7D018CC02047EC3E0070B349 /* QdtUserSelectedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D018CBF2047EC3E0070B349 /* QdtUserSelectedViewModel.m */; };
+		7D018CCC2047F7EC0070B349 /* QdtSelectedUserTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D018CCB2047F7EC0070B349 /* QdtSelectedUserTypeViewController.m */; };
+		7D018CCF2048DE1A0070B349 /* QdtEmployeeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D018CCE2048DE1A0070B349 /* QdtEmployeeModel.m */; };
+		7D018CD22048DE280070B349 /* QdtApproverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D018CD12048DE280070B349 /* QdtApproverModel.m */; };
+		7D018CD52048DE3D0070B349 /* QdtPrincipalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D018CD42048DE3D0070B349 /* QdtPrincipalModel.m */; };
 		7D130E5620455D5400918E18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E5520455D5400918E18 /* AppDelegate.m */; };
 		7D130E5920455D5400918E18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D130E5820455D5400918E18 /* ViewController.m */; };
 		7D130E5C20455D5400918E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D130E5A20455D5400918E18 /* Main.storyboard */; };
@@ -60,6 +66,18 @@
 		1B236F2DB6FCFC3CEA209DB3 /* Pods-QdtMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QdtMVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QdtMVVMDemo/Pods-QdtMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 		724438655E7EE46631905F74 /* Pods-QdtMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QdtMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QdtMVVMDemo/Pods-QdtMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7D018CB5204791950070B349 /* QdtUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QdtUserCell.xib; sourceTree = "<group>"; };
+		7D018CBB2047E4310070B349 /* QdtCommonUserListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtCommonUserListViewController.h; sourceTree = "<group>"; };
+		7D018CBC2047E4310070B349 /* QdtCommonUserListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtCommonUserListViewController.m; sourceTree = "<group>"; };
+		7D018CBE2047EC3E0070B349 /* QdtUserSelectedViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtUserSelectedViewModel.h; sourceTree = "<group>"; };
+		7D018CBF2047EC3E0070B349 /* QdtUserSelectedViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtUserSelectedViewModel.m; sourceTree = "<group>"; };
+		7D018CCA2047F7EC0070B349 /* QdtSelectedUserTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtSelectedUserTypeViewController.h; sourceTree = "<group>"; };
+		7D018CCB2047F7EC0070B349 /* QdtSelectedUserTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtSelectedUserTypeViewController.m; sourceTree = "<group>"; };
+		7D018CCD2048DE1A0070B349 /* QdtEmployeeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtEmployeeModel.h; sourceTree = "<group>"; };
+		7D018CCE2048DE1A0070B349 /* QdtEmployeeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtEmployeeModel.m; sourceTree = "<group>"; };
+		7D018CD02048DE280070B349 /* QdtApproverModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtApproverModel.h; sourceTree = "<group>"; };
+		7D018CD12048DE280070B349 /* QdtApproverModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtApproverModel.m; sourceTree = "<group>"; };
+		7D018CD32048DE3D0070B349 /* QdtPrincipalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QdtPrincipalModel.h; sourceTree = "<group>"; };
+		7D018CD42048DE3D0070B349 /* QdtPrincipalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QdtPrincipalModel.m; sourceTree = "<group>"; };
 		7D130E5120455D5400918E18 /* QdtMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QdtMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D130E5420455D5400918E18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D130E5520455D5400918E18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,6 +175,49 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7D018CB72047E2280070B349 /* CommonUserList */ = {
+			isa = PBXGroup;
+			children = (
+				7D018CB82047E33F0070B349 /* View */,
+				7D018CBA2047E34D0070B349 /* ViewModel */,
+				7D018CB92047E3450070B349 /* Model */,
+			);
+			path = CommonUserList;
+			sourceTree = "<group>";
+		};
+		7D018CB82047E33F0070B349 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D018CCA2047F7EC0070B349 /* QdtSelectedUserTypeViewController.h */,
+				7D018CCB2047F7EC0070B349 /* QdtSelectedUserTypeViewController.m */,
+				7D018CBB2047E4310070B349 /* QdtCommonUserListViewController.h */,
+				7D018CBC2047E4310070B349 /* QdtCommonUserListViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D018CB92047E3450070B349 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D018CCD2048DE1A0070B349 /* QdtEmployeeModel.h */,
+				7D018CCE2048DE1A0070B349 /* QdtEmployeeModel.m */,
+				7D018CD02048DE280070B349 /* QdtApproverModel.h */,
+				7D018CD12048DE280070B349 /* QdtApproverModel.m */,
+				7D018CD32048DE3D0070B349 /* QdtPrincipalModel.h */,
+				7D018CD42048DE3D0070B349 /* QdtPrincipalModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D018CBA2047E34D0070B349 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D018CBE2047EC3E0070B349 /* QdtUserSelectedViewModel.h */,
+				7D018CBF2047EC3E0070B349 /* QdtUserSelectedViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7D130E4820455D5400918E18 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +251,7 @@
 				7D164EB0204639FF008FAB13 /* QdtReactiveViewController.h */,
 				7D164EBF204654DD008FAB13 /* PrefixHeader.pch */,
 				7D130E8620455E6700918E18 /* UserList */,
+				7D018CB72047E2280070B349 /* CommonUserList */,
 				7D130E5A20455D5400918E18 /* Main.storyboard */,
 				7D130E5D20455D5400918E18 /* Assets.xcassets */,
 				7D130E5F20455D5400918E18 /* LaunchScreen.storyboard */,
@@ -508,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D018CCC2047F7EC0070B349 /* QdtSelectedUserTypeViewController.m in Sources */,
 				7D164EC220465A34008FAB13 /* QdtUserModel.m in Sources */,
 				7D164EB720463E23008FAB13 /* UIImage+QdtMethods.m in Sources */,
 				7D164EC82046946F008FAB13 /* QdtUserCell.m in Sources */,
@@ -518,13 +581,18 @@
 				7D130E5920455D5400918E18 /* ViewController.m in Sources */,
 				7D130E922045606900918E18 /* QdtUserListViewModel.m in Sources */,
 				7D130EA6204639A500918E18 /* MJRefreshHeaderView.m in Sources */,
+				7D018CD22048DE280070B349 /* QdtApproverModel.m in Sources */,
 				7D164EBE204653DE008FAB13 /* QdtNetworkingUtility.m in Sources */,
+				7D018CBD2047E4310070B349 /* QdtCommonUserListViewController.m in Sources */,
 				7D130EA9204639A500918E18 /* UIScrollView+Extension.m in Sources */,
 				7D130EA4204639A500918E18 /* UIScrollView+MJRefresh.m in Sources */,
+				7D018CCF2048DE1A0070B349 /* QdtEmployeeModel.m in Sources */,
 				7D130EAB204639A500918E18 /* UIView+Extension.m in Sources */,
 				7D130EA5204639A500918E18 /* MJRefreshConst.m in Sources */,
 				7D130E6420455D5500918E18 /* main.m in Sources */,
+				7D018CD52048DE3D0070B349 /* QdtPrincipalModel.m in Sources */,
 				7D130EA8204639A500918E18 /* MJRefreshBaseView.m in Sources */,
+				7D018CC02047EC3E0070B349 /* QdtUserSelectedViewModel.m in Sources */,
 				7D130E8C20455F8F00918E18 /* QdtUserListViewController.m in Sources */,
 				7D164EB2204639FF008FAB13 /* QdtTableViewDataSourceBinder.m in Sources */,
 				7D130E5620455D5400918E18 /* AppDelegate.m in Sources */,

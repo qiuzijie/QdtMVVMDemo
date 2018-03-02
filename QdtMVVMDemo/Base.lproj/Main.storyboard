@@ -55,11 +55,26 @@
                                     <constraint firstAttribute="height" constant="100" id="mbe-zl-6oI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="复杂页面">
+                                <state key="normal" title="重用页面">
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="tapComplexButton:" destination="zZF-v1-SiB" eventType="touchUpInside" id="oDX-rX-rrV"/>
+                                    <segue destination="xIH-VY-obq" kind="show" id="trk-0o-eG4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-Ts-cly">
+                                <rect key="frame" x="0.0" y="264" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.97027501990643972" green="0.46768787484170926" blue="0.25088672546031121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="yMT-dW-T5S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="组装页面">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapComplexButton:" destination="zZF-v1-SiB" eventType="touchUpInside" id="n0R-dS-hgH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,7 +85,10 @@
                             <constraint firstItem="4WW-js-z6T" firstAttribute="trailing" secondItem="TSc-Xo-iO2" secondAttribute="trailing" id="EjO-5d-RbA"/>
                             <constraint firstItem="TSc-Xo-iO2" firstAttribute="top" secondItem="4WW-js-z6T" secondAttribute="top" id="RAC-0H-eBs"/>
                             <constraint firstItem="TSc-Xo-iO2" firstAttribute="leading" secondItem="4WW-js-z6T" secondAttribute="leading" id="UU0-Yt-UfX"/>
+                            <constraint firstItem="Eja-Ts-cly" firstAttribute="leading" secondItem="4WW-js-z6T" secondAttribute="leading" id="dFP-MG-sj1"/>
+                            <constraint firstItem="Eja-Ts-cly" firstAttribute="trailing" secondItem="4WW-js-z6T" secondAttribute="trailing" id="tIL-Qs-5Kj"/>
                             <constraint firstItem="mlE-Sp-HOG" firstAttribute="top" secondItem="TSc-Xo-iO2" secondAttribute="bottom" id="v6r-jn-ems"/>
+                            <constraint firstItem="Eja-Ts-cly" firstAttribute="top" secondItem="mlE-Sp-HOG" secondAttribute="bottom" id="y3Y-OP-8JT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4WW-js-z6T"/>
                     </view>
@@ -79,6 +97,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfF-hW-i0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="388"/>
+        </scene>
+        <!--Qdt Selected User Type View Controller-->
+        <scene sceneID="fqh-op-07O">
+            <objects>
+                <viewController id="xIH-VY-obq" customClass="QdtSelectedUserTypeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tav-Ur-W5q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOP-H5-0gN">
+                                <rect key="frame" x="87" y="164" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jkb-lt-qSc"/>
+                                    <constraint firstAttribute="width" constant="200" id="n8A-2T-kiu"/>
+                                </constraints>
+                                <state key="normal" title="EmployeeList"/>
+                                <connections>
+                                    <action selector="tapEmployeeButton:" destination="xIH-VY-obq" eventType="touchUpInside" id="fcK-Ur-6Au"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-Bc-SKw">
+                                <rect key="frame" x="87" y="224" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="01W-TM-KGB"/>
+                                    <constraint firstAttribute="width" constant="200" id="8Wr-wG-87t"/>
+                                </constraints>
+                                <state key="normal" title="ApproverList"/>
+                                <connections>
+                                    <action selector="tapApproverButton:" destination="xIH-VY-obq" eventType="touchUpInside" id="U6V-rt-d1y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-t2-14L">
+                                <rect key="frame" x="87" y="284" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Tz-X9-3pu"/>
+                                    <constraint firstAttribute="width" constant="200" id="zWx-1r-UhG"/>
+                                </constraints>
+                                <state key="normal" title="PrincipalList"/>
+                                <connections>
+                                    <action selector="tapPrincipalButton:" destination="xIH-VY-obq" eventType="touchUpInside" id="8gP-ss-lIx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zOP-H5-0gN" firstAttribute="top" secondItem="hnj-Ae-Euo" secondAttribute="top" constant="100" id="LXT-5r-dOA"/>
+                            <constraint firstItem="TLB-t2-14L" firstAttribute="top" secondItem="sgb-Bc-SKw" secondAttribute="bottom" constant="20" id="Sfw-NW-WkU"/>
+                            <constraint firstItem="TLB-t2-14L" firstAttribute="centerX" secondItem="Tav-Ur-W5q" secondAttribute="centerX" id="XSW-Rx-1Rl"/>
+                            <constraint firstItem="zOP-H5-0gN" firstAttribute="centerX" secondItem="Tav-Ur-W5q" secondAttribute="centerX" id="jRB-pu-il4"/>
+                            <constraint firstItem="sgb-Bc-SKw" firstAttribute="centerX" secondItem="Tav-Ur-W5q" secondAttribute="centerX" id="ksg-Ma-wd9"/>
+                            <constraint firstItem="sgb-Bc-SKw" firstAttribute="top" secondItem="zOP-H5-0gN" secondAttribute="bottom" constant="20" id="vdB-Kc-sMg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hnj-Ae-Euo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ie0-mg-9Eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="387"/>
         </scene>
     </scenes>
 </document>

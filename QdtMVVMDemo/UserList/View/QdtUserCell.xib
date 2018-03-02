@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="388" height="73.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="z" translatesAutoresizingMaskIntoConstraints="NO" id="BTo-vv-hgy">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="z" translatesAutoresizingMaskIntoConstraints="NO" id="BTo-vv-hgy">
                         <rect key="frame" x="10" y="10" width="53.5" height="53.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="BTo-vv-hgy" secondAttribute="height" multiplier="1:1" id="t6G-1h-dHw"/>
@@ -72,6 +72,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="followButton" destination="O8y-up-Ui6" id="YAq-Ng-hSk"/>
+                <outlet property="iconImageView" destination="BTo-vv-hgy" id="5dS-SP-Ncq"/>
                 <outlet property="likeButton" destination="mUB-dF-nCl" id="rCK-sd-dZT"/>
                 <outlet property="userNameLabel" destination="hno-vP-c7u" id="AYF-xg-mqa"/>
             </connections>

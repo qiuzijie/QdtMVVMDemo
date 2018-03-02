@@ -175,7 +175,8 @@ static CGFloat kSearchTextFieldHeight = 40;
 #pragma mark- action
 
 - (void)followUser:(QdtUserCellViewModel *)viewModel{
-    if (viewModel.user.follow) {
+    QdtUserModel *user = viewModel.user;
+    if (user.follow) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"取消关注" message:[NSString stringWithFormat:@"确定取消关注 %@ 吗？",viewModel.userName] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             ;

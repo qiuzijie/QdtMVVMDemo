@@ -7,9 +7,71 @@
 //
 
 #import "QdtNetworkingUtility.h"
-#import "QdtUserListReceiveModel.h"
 
 @implementation QdtNetworkingUtility
+
+- (RACSignal *)fetchEmployeeListSignalWithInput:(NSDictionary *)input{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self requestAPIMethod:@"FetchEmployeeList" arguments:input completionHandler:^(NSError *error, id result) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                NSMutableArray *datas = [NSMutableArray new];
+                for (NSInteger i = 0; i <= 20; i++) {
+                    QdtEmployeeModel *user = [QdtEmployeeModel new];
+                    user.userName = [NSString stringWithFormat:@"XXX %ld 号",i];
+                    user.iconName = @"z";
+                    [datas addObject:user];
+                }
+                [subscriber sendNext:[datas copy]];
+                [subscriber sendCompleted];
+            };
+        }];
+        return nil;
+    }];
+}
+
+- (RACSignal *)fetchApproverListSignalWithInput:(NSDictionary *)input{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self requestAPIMethod:@"FetchApproverList" arguments:input completionHandler:^(NSError *error, id result) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                NSMutableArray *datas = [NSMutableArray new];
+                for (NSInteger i = 0; i <= 20; i++) {
+                    QdtApproverModel *user = [QdtApproverModel new];
+                    user.userName = [NSString stringWithFormat:@"XXX %ld 号",i];
+                    user.iconName = @"weige";
+                    [datas addObject:user];
+                }
+                [subscriber sendNext:[datas copy]];
+                [subscriber sendCompleted];
+            };
+        }];
+        return nil;
+    }];
+}
+
+- (RACSignal *)fetchPrincipalListSignalWithInput:(NSDictionary *)input{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [self requestAPIMethod:@"FetchPrincipalList" arguments:input completionHandler:^(NSError *error, id result) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                NSMutableArray *datas = [NSMutableArray new];
+                for (NSInteger i = 0; i <= 20; i++) {
+                    QdtPrincipalModel *user = [QdtPrincipalModel new];
+                    user.userName = [NSString stringWithFormat:@"XXX %ld 号",i];
+                    user.iconName = @"genshuo";
+                    [datas addObject:user];
+                }
+                [subscriber sendNext:[datas copy]];
+                [subscriber sendCompleted];
+            };
+        }];
+        return nil;
+    }];
+}
 
 - (RACSignal *)fetchUserListSignalWithInput:(NSDictionary *)input{
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -25,7 +87,7 @@
                     if (query.length > 0) {
                         user.userName = [NSString stringWithFormat:@"%@ %ld 号",query,i];
                     } else {
-                        user.userName = [NSString stringWithFormat:@"用户 %ld 号",i];
+                        user.userName = [NSString stringWithFormat:@"XXX %ld 号",i];
                     }
                     [datas addObject:user];
                 }
