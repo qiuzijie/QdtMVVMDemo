@@ -89,24 +89,26 @@ static CGFloat kSearchTextFieldHeight = 40;
     
 //    [self.userTableView bindRowSourceSignal:RACObserve(self.viewModel, userViewModels) cellIdentifier:@"cell"];
     
-    [[[RACObserve(self.viewModel, userViewModels) distinctUntilChanged] deliverOnMainThread] subscribeNext:^(id x) {
+    [[RACObserve(self.viewModel, userViewModels) distinctUntilChanged] subscribeNext:^(id x) {
         @strongify(self);
         [self.userTableView reloadData];
     }];
     
     [self.userTableView addHeaderWithCommand:self.viewModel.fetchUserListCommand];
+    [self.userTableView addFooterWithCommand:self.viewModel.fetchUserListCommand];
+    RAC(self.userTableView.footer, hidden) = [[RACObserve(self.viewModel, userListHasNext) not] distinctUntilChanged];
 
-    [[RACObserve(self.viewModel, userListHasNext) deliverOnMainThread] subscribeNext:^(NSNumber *value) {
-        @strongify(self);
-        if (value && value.boolValue) {
-            [self.userTableView setFooterHidden:NO];
-            if (!self.userTableView.footer) {
-                [self.userTableView addFooterWithCommand:self.viewModel.fetchUserListCommand];
-            }
-        } else {
-            [self.userTableView setFooterHidden:YES];
-        };
-    }];
+//    [RACObserve(self.viewModel, userListHasNext) subscribeNext:^(NSNumber *value) {
+//        @strongify(self);
+//        if (value && value.boolValue) {
+//            [self.userTableView setFooterHidden:NO];
+//            if (!self.userTableView.footer) {
+//                [self.userTableView addFooterWithCommand:self.viewModel.fetchUserListCommand];
+//            }
+//        } else {
+//            [self.userTableView setFooterHidden:YES];
+//        };
+//    }];
     
     [self.viewModel.fetchUserListCommand.executing subscribeNext:^(NSNumber *value) {
         @strongify(self);

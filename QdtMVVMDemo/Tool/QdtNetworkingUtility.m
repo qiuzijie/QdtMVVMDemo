@@ -135,7 +135,9 @@
 - (void)requestAPIMethod:(NSString *)method arguments:(NSDictionary *)args completionHandler:(NetworkCompletionHandler)completionHandler{
     [[RACScheduler scheduler] afterDelay:2 schedule:^{
         if (completionHandler) {
-            completionHandler(nil,nil);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil,nil);
+            });
         };
     }];
 }
